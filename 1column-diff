@@ -259,6 +259,8 @@ sub main()
             $u1{$x[$k1]}=1;
         }
     }
+    #TODO solve for "readahead in case of deletions/additions."
+
     for my $entry (@{$a2}) {
         my $match=0;
         $match=compareLines($sep, $entry->{line}, $a1, \%u1);
